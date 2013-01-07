@@ -52,7 +52,7 @@ class horizon(
   package { 'horizon':
     name    => $::horizon::params::package_name,
     ensure  => $package_ensure,
-    require => Package[$::horizon::params::http_service],
+    require => Package[$::horizon::params::package_name],
   }
 
   file { $::horizon::params::config_file:
